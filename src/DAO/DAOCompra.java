@@ -1,7 +1,7 @@
 package DAO;
 
 import model.ModelCompra;
-import conexoes.ConexaoMySql;
+import connections.ConexaoMySql;
 import java.util.ArrayList;
 /**
 *
