@@ -5,7 +5,7 @@ import connections.ConexaoMySql;
 import java.util.ArrayList;
 /**
 *
-* @author Marley
+* @author Gustavo Torrezani
 */
 public class DAOUsuario extends ConexaoMySql {
 
@@ -18,13 +18,15 @@ public class DAOUsuario extends ConexaoMySql {
         try {
             this.conectar();
             return this.insertSQL(
-                "INSERT INTO Usuario ("
+                "INSERT INTO usuario ("
                     + "pk_usu_id,"
-                    + "usu_nivel_permissao,"
+                    + "usu_login,"
+                    + "usu_senha,"
                     + "fk_pes_id"
                 + ") VALUES ("
                     + "'" + pModelUsuario.getUsuId() + "',"
-                    + "'" + pModelUsuario.getUsuNivel_permissao() + "',"
+                    + "'" + pModelUsuario.getUsuLogin() + "',"
+                    + "'" + pModelUsuario.getUsuSenha() + "',"
                     + "'" + pModelUsuario.getPesId() + "'"
                 + ");"
             );
@@ -48,10 +50,11 @@ public class DAOUsuario extends ConexaoMySql {
             this.executarSQL(
                 "SELECT "
                     + "pk_usu_id,"
-                    + "usu_nivel_permissao,"
+                    + "usu_login,"
+                    + "usu_senha,"
                     + "fk_pes_id"
                  + " FROM"
-                     + " Usuario"
+                     + " usuario"
                  + " WHERE"
                      + " pk_usu_id = '" + pUsuId + "'"
                 + ";"
@@ -59,8 +62,9 @@ public class DAOUsuario extends ConexaoMySql {
 
             while(this.getResultSet().next()){
                 modelUsuario.setUsuId(this.getResultSet().getInt(1));
-                modelUsuario.setUsuNivel_permissao(this.getResultSet().getString(2));
-                modelUsuario.setPesId(this.getResultSet().getInt(3));
+                modelUsuario.setUsuLogin(this.getResultSet().getString(2));
+                modelUsuario.setUsuSenha(this.getResultSet().getString(3));
+                modelUsuario.setPesId(this.getResultSet().getString(4));
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -82,18 +86,20 @@ public class DAOUsuario extends ConexaoMySql {
             this.executarSQL(
                 "SELECT "
                     + "pk_usu_id,"
-                    + "usu_nivel_permissao,"
+                    + "usu_login,"
+                    + "usu_senha,"
                     + "fk_pes_id"
                  + " FROM"
-                     + " Usuario"
+                     + " usuario"
                 + ";"
             );
 
             while(this.getResultSet().next()){
                 modelUsuario = new ModelUsuario();
                 modelUsuario.setUsuId(this.getResultSet().getInt(1));
-                modelUsuario.setUsuNivel_permissao(this.getResultSet().getString(2));
-                modelUsuario.setPesId(this.getResultSet().getInt(3));
+                modelUsuario.setUsuLogin(this.getResultSet().getString(2));
+                modelUsuario.setUsuSenha(this.getResultSet().getString(3));
+                modelUsuario.setPesId(this.getResultSet().getString(4));
                 listamodelUsuario.add(modelUsuario);
             }
         }catch(Exception e){
@@ -113,9 +119,10 @@ public class DAOUsuario extends ConexaoMySql {
         try {
             this.conectar();
             return this.executarUpdateDeleteSQL(
-                "UPDATE Usuario SET "
+                "UPDATE usuario SET "
                     + "pk_usu_id = '" + pModelUsuario.getUsuId() + "',"
-                    + "usu_nivel_permissao = '" + pModelUsuario.getUsuNivel_permissao() + "',"
+                    + "usu_login = '" + pModelUsuario.getUsuLogin() + "',"
+                    + "usu_senha = '" + pModelUsuario.getUsuSenha() + "',"
                     + "fk_pes_id = '" + pModelUsuario.getPesId() + "'"
                 + " WHERE "
                     + "pk_usu_id = '" + pModelUsuario.getUsuId() + "'"
@@ -138,7 +145,7 @@ public class DAOUsuario extends ConexaoMySql {
         try {
             this.conectar();
             return this.executarUpdateDeleteSQL(
-                "DELETE FROM Usuario "
+                "DELETE FROM usuario "
                 + " WHERE "
                     + "pk_usu_id = '" + pUsuId + "'"
                 + ";"

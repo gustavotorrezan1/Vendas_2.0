@@ -1,13 +1,14 @@
 package model;
 /**
 *
-* @author Marley
+* @author Gustavo Torrezani
 */
 public class ModelUsuario {
 
     private int usuId;
-    private String usuNivel_permissao;
-    private int pesId;
+    private String usuLogin;
+    private String usuSenha;
+    private String pesId;
 
     /**
     * Construtor
@@ -29,35 +30,49 @@ public class ModelUsuario {
     }
 
     /**
-    * seta o valor de usuNivel_permissao
-    * @param pUsuNivel_permissao
+    * seta o valor de usuLogin
+    * @param pUsuLogin
     */
-    public void setUsuNivel_permissao(String pUsuNivel_permissao){
-        this.usuNivel_permissao = pUsuNivel_permissao;
+    public void setUsuLogin(String pUsuLogin){
+        this.usuLogin = pUsuLogin;
     }
     /**
-    * @return usuNivel_permissao
+    * @return usuLogin
     */
-    public String getUsuNivel_permissao(){
-        return this.usuNivel_permissao;
+    public String getUsuLogin(){
+        return this.usuLogin;
+    }
+
+    /**
+    * seta o valor de usuSenha
+    * @param pUsuSenha
+    */
+    public void setUsuSenha(String pUsuSenha){
+        this.usuSenha = pUsuSenha;
+    }
+    /**
+    * @return usuSenha
+    */
+    public String getUsuSenha(){
+        return this.usuSenha;
     }
 
     /**
     * seta o valor de pesId
     * @param pPesId
     */
-    public void setPesId(int pPesId){
+    public void setPesId(String pPesId){
         this.pesId = pPesId;
     }
     /**
     * @return fk_pesId
     */
-    public int getPesId(){
+    public String getPesId(){
         return this.pesId;
     }
 
     @Override
     public String toString(){
-        return "ModelUsuario {" + "::usuId = " + this.usuId + "::usuNivel_permissao = " + this.usuNivel_permissao + "::pesId = " + this.pesId +  "}";
+        return "ModelUsuario {" + "::usuId = " + this.usuId + "::usuLogin = " + this.usuLogin + "::usuSenha = " + this.usuSenha + "::pesId = " + this.pesId +  "}";
     }
 }
