@@ -115,6 +115,8 @@ CREATE TABLE IF NOT EXISTS `ControleEstoque`.`Usuario` (
   `pk_usu_id` INT NOT NULL AUTO_INCREMENT,
   `usu_nivel_permissao` INT NOT NULL,
   `fk_pes_id` INT NOT NULL,
+  `usu_login` VARCHAR(45) NOT NULL,
+  `usu_senha` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`pk_usu_id`, `fk_pes_id`),
   INDEX `fk_Usuario_Pessoa1_idx` (`fk_pes_id` ASC) VISIBLE,
   CONSTRAINT `fk_Usuario_Pessoa1`
