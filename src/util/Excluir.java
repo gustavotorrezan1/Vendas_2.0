@@ -10,5 +10,7 @@ package util;
  * @author GustavoTorrezani
  */
 public class Excluir {
-    
+     public static void delete(){
+         
+     }
 }

@@ -10,12 +10,20 @@ import javax.swing.JOptionPane;
 public class Controlar {
     public static void start(){
         int controle;
+        int controle1;
+        int controle2;
+        int controle3;
       for (int i = 0; i < 999; i++) {
             controle = Integer.valueOf(JOptionPane.showInputDialog("Digite: \n1 - para Procurar \n2 - para Cadastrar \n3 - para Excluir \n0 para sair"));
-            if(controle <= 4 && controle > 0){
-                 JOptionPane.showInputDialog("Selecione uma opção correta");
-                    
+            if(controle == 1)
+            {
+                
             }
+            if(controle == 2)
+            {
+                controle2 = Integer.valueOf(JOptionPane.showInputDialog("Digite: \n1 - para cadastar Pessoa \n2 - para cadastrar Fornecedor \n3 - para Produto \n4 para cadastrar Cliente"));
+            }
+            
                
             
                 
