@@ -14,7 +14,7 @@ import model.ModelPessoa;
  * @author GustavoTorrezani
  */
 public class Cadastrar {
-         public static void cadastro(){
+         public static void cadastro_pessoa(){
          //cadastrar pessoa    
          ModelPessoa ModelPessoa = new ModelPessoa();
          ControllerPessoa ControllerPessoa = new ControllerPessoa();

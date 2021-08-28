@@ -5,19 +5,10 @@
  */
 package util;
 
-import javax.swing.JOptionPane;
-
-
 /**
  *
  * @author GustavoTorrezani
  */
-public class Main {
-
-    public static void main(String[] args) {
-        Controlar.start();
-        Cadastrar.cadastro_pessoa();
-         
-    }
+public class Excluir {
     
 }
