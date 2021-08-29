@@ -10,6 +10,7 @@ import controller.ControllerPessoa;
 import javax.swing.JOptionPane;
 import model.ModelFornecedor;
 import model.ModelPessoa;
+import model.ModelProduto;
 
 /**
  *
@@ -42,8 +43,30 @@ public class Cadastrar {
              ModelFornecedor.setForRepresentante(JOptionPane.showInputDialog("Informe o nome do Representante"));
              ModelPessoa ModelPessoa = new ModelPessoa();
              //ControllerPessoa ControllerPessoa = new ControllerPessoa();
-            // ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuÃ¡rio"));
+            // ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuario"));
              //ControllerPessoa.getPessoaController(PesNome);
+             
+             
+             public static void cadastro_produto(){
+                 ModelProduto ModelProduto = new ModelProduto();
+                 ControllerProduto ControllerProduto = new ControllerProduto();
+                 ModelProduto = new ModelProduto();
+                 ModelProduto.setProDescricao(JOptionPane.showInputDialog("Informe a descrição do produto"));
+                 ModelProduto.setProNomeLongo(JOptionPane.showInputDialog("Informe o nome do Produto"));
+                 ModelProduto.setProCod_bar(JOptionPane.showInputDialog("Informe o codigo de barras do Produto"));
+                 ModelProduto.setProPreco_ven(JOptionPane.showInputDialog("Informe o preço de venda do Produto"));
+                 ModelProduto.setProPreco_cus(JOptionPane.showInputDialog("Informe o preço de custo do Produto"));
+                 ModelProduto.setProCategoria(JOptionPane.showInputDialog("Informe a categoria  do Produto"));
+                 ModelProduto.setProTipo_un(JOptionPane.showInputDialog("Informe o tipo do Produto"));
+                 ModelProduto.setProQnt_estoque(JOptionPane.showInputDialog("Informe a quantidade no estoque do Produto"));
+                 
+                 ModelProduto ModelProduto = new ModelProduto();
+                 //ControllerPessoa ControllerPessoa = new ControllerPessoa();
+                // ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuÃ¡rio"));
+                 //ControllerPessoa.getPessoaController(PesNome);
+                 
+             
+             
              
              
              
