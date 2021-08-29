@@ -17,25 +17,26 @@ import model.ModelProduto;
  * @author GustavoTorrezani
  */
 public class Cadastrar {
-         public static void cadastro_pessoa(){
-         //cadastrar pessoa    
-            ModelPessoa ModelPessoa = new ModelPessoa();
-            ControllerPessoa ControllerPessoa = new ControllerPessoa();
-            ModelPessoa = new ModelPessoa();
-            ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuário"));
-            ModelPessoa.setPesCnpj(JOptionPane.showInputDialog("Informe o CNPJ (se houver) do usuário"));
-            ModelPessoa.setPesCpf(JOptionPane.showInputDialog("Informe o CPF (se houver) do usuário"));
-            ModelPessoa.setPesTelefone(JOptionPane.showInputDialog("Informe o telefone do usuário"));
-            ModelPessoa.setPesEmail(JOptionPane.showInputDialog("Informe o email do usuário"));
-            ModelPessoa.setPesCep(JOptionPane.showInputDialog("Informe o CEP do usuário"));
-            ModelPessoa.setPesEstado(JOptionPane.showInputDialog("Informe o Estado do usuário"));
-            ModelPessoa.setPesCidade(JOptionPane.showInputDialog("Informe o cidade do usuário"));
-            ModelPessoa.setPesBairro(JOptionPane.showInputDialog("Informe o bairro do usuário"));
-            ModelPessoa.setPesRua(JOptionPane.showInputDialog("Informe o rua do usuário"));
-            ModelPessoa.setPesNum_rua(JOptionPane.showInputDialog("Informe o número da rua do usuário"));
-            ControllerPessoa.salvarPessoaController(ModelPessoa);
-}
-         public static void cadastro_fornecedor(){
+	public static void cadastro_pessoa() {
+		// cadastrar pessoa
+		ModelPessoa ModelPessoa = new ModelPessoa();
+		ControllerPessoa ControllerPessoa = new ControllerPessoa();
+		ModelPessoa = new ModelPessoa();
+		ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuário"));
+		ModelPessoa.setPesCnpj(JOptionPane.showInputDialog("Informe o CNPJ (se houver) do usuário"));
+		ModelPessoa.setPesCpf(JOptionPane.showInputDialog("Informe o CPF (se houver) do usuário"));
+		ModelPessoa.setPesTelefone(JOptionPane.showInputDialog("Informe o telefone do usuário"));
+		ModelPessoa.setPesEmail(JOptionPane.showInputDialog("Informe o email do usuário"));
+		ModelPessoa.setPesCep(JOptionPane.showInputDialog("Informe o CEP do usuário"));
+		ModelPessoa.setPesEstado(JOptionPane.showInputDialog("Informe o Estado do usuário"));
+		ModelPessoa.setPesCidade(JOptionPane.showInputDialog("Informe o cidade do usuário"));
+		ModelPessoa.setPesBairro(JOptionPane.showInputDialog("Informe o bairro do usuário"));
+		ModelPessoa.setPesRua(JOptionPane.showInputDialog("Informe o rua do usuário"));
+		ModelPessoa.setPesNum_rua(JOptionPane.showInputDialog("Informe o número da rua do usuário"));
+		ControllerPessoa.salvarPessoaController(ModelPessoa);
+	}
+
+	public static void cadastro_fornecedor(){
              ModelFornecedor ModelFornecedor = new ModelFornecedor();
              ControllerFornecedor ControllerFornecedor = new ControllerFornecedor();
              ModelFornecedor = new ModelFornecedor();
@@ -45,9 +46,9 @@ public class Cadastrar {
              //ControllerPessoa ControllerPessoa = new ControllerPessoa();
             // ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuario"));
              //ControllerPessoa.getPessoaController(PesNome);
-             
-             
-             public static void cadastro_produto(){
+	}
+
+	public static void cadastro_produto(){
                  ModelProduto ModelProduto = new ModelProduto();
                  ControllerProduto ControllerProduto = new ControllerProduto();
                  ModelProduto = new ModelProduto();
@@ -64,16 +65,27 @@ public class Cadastrar {
                  //ControllerPessoa ControllerPessoa = new ControllerPessoa();
                 // ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuário"));
                  //ControllerPessoa.getPessoaController(PesNome);
-                 
-             
-             
-             
-             
-             
-             //fazer o cadastro dos produtos e do pagamento e usuario
-             
-         
-         }
-                 
-}
+	}
 
+	public static void cadastro_pagamento(){
+                     ModelPagamento ModelPagamento = new ModelPagamento();
+                     ControllerPagamento ControllerPagamento = new ControllerPagamento();
+                     ModelPagamento = new ModelPagamento();
+                     ModelPagamento.setPagTipo(JOptionPane.showInputDialog("Informe o tipo de pagamento"));
+                     ModelPagamento.setPagValor(JOptionPane.showInputDialog("Informe o valor do pagamento"));
+                     ModelPagamento.setPagData(JOptionPane.showInputDialog("Informe a data do pagamento"));
+	}
+	public static void cadastro_usuario() {
+		ModelPagamento ModelUsuario = new ModelUsusario();
+		ControllerUsuario ControllerUsuario = new ControllerUsuario();
+		ModelUsuario = new ModelUsuario();
+		ModelUsuario.setUsuLogin(JOptionPane.showInputDialog("Informe o tipo de pagamento"));
+		ModelUsuario.setUsuSenha(JOptionPane.showInputDialog("Informe o valor do pagamento"));
+		}
+
+		// fazer o cadastro dos produtos e do pagamento e usuario
+
+	}
+	
+
+}
