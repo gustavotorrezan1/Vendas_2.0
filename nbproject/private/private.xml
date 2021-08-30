@@ -3,7 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Cadastrar.java</file>
+            <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Excluir.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/DAO/DAOUsuario.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Principal.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/view/ViewUsuario.java</file>
@@ -12,9 +12,7 @@
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/DAO/DAOCompra.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Controlar.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Main.java</file>
-            <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/controller/ControllerPessoa.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/DAO/DAOCliente.java</file>
-            <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/model/ModelPessoa.java</file>
         </group>
     </open-files>
 </project-private>

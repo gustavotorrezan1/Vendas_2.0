@@ -15,7 +15,7 @@ public class Controlar {
             int controle = Integer.valueOf(JOptionPane.showInputDialog("Digite: \n1 - para Procurar \n2 - para Cadastrar \n3 - para Excluir \n0 para sair"));
             if(controle == 1)
             {
-                 Cadastrar.cadastro_fornecedor();
+              Excluir.delete_fornecedor();
             }
             if(controle == 2)
             {
