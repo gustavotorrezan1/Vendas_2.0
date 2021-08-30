@@ -8,9 +8,11 @@
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Principal.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/view/ViewUsuario.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/connections/ConexaoMySql.java</file>
+            <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/DAO/DAOPessoa.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/DAO/DAOCompra.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Controlar.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/util/Main.java</file>
+            <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/controller/ControllerPessoa.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/DAO/DAOCliente.java</file>
             <file>file:/C:/Users/gusto/Documents/NetBeansProjects/Vendas2.0/src/model/ModelPessoa.java</file>
         </group>

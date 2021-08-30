@@ -42,11 +42,13 @@ public class Cadastrar {
         ModelPessoa.setPesRua(JOptionPane.showInputDialog("Informe o rua do usuário"));
         ModelPessoa.setPesNum_rua(JOptionPane.showInputDialog("Informe o número da rua do usuário"));
         controllerPessoa.salvarPessoaController(ModelPessoa);
-        controllerPessoa = new ControllerPessoa();
-        controllerPessoa.getPessoaDAO(ModelPessoa.getPesNome());
+      
     }
 
     public static void cadastro_fornecedor() {
+        ModelPessoa ModelPessoa = new ModelPessoa();
+        ModelPessoa = new ModelPessoa();
+        ControllerPessoa controllerPessoa = new ControllerPessoa();
         ModelFornecedor ModelFornecedor = new ModelFornecedor();
         ControllerFornecedor ControllerFornecedor = new ControllerFornecedor();
         ModelFornecedor = new ModelFornecedor();
