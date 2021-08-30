@@ -5,7 +5,7 @@ package model;
 */
 public class ModelPessoa {
 //
-    private int pesId;
+    public int pesId;
     private String pesNome;
     private String pesCpf;
     private String pesCnpj;

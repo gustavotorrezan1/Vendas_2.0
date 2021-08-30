@@ -41,7 +41,7 @@ ENGINE = InnoDB;
 -- Table `ControleEstoque`.`Fornecedor`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ControleEstoque`.`Fornecedor` (
-  `pk_for_id` INT NOT NULL,
+  `pk_for_id` INT NOT NULL AUTO_INCREMENT,
   `for_empresa` VARCHAR(45) NOT NULL,
   `for_representante` VARCHAR(45) NOT NULL,
   `fk_pes_id` INT NOT NULL,
@@ -99,7 +99,7 @@ ENGINE = InnoDB;
 -- Table `ControleEstoque`.`Pagamento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ControleEstoque`.`Pagamento` (
-  `pk_pag_id` INT NOT NULL,
+  `pk_pag_id` INT NOT NULL AUTO_INCREMENT,
   `pag_tipo_pagamento` VARCHAR(45) NOT NULL,
   `pag_valor_pagemento` DECIMAL NOT NULL,
   `pag_data_pagamanto` DATE NOT NULL,
@@ -202,3 +202,6 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+ALTER TABLE `controleestoque`.`pessoa` 
+CHANGE COLUMN `pes_telefone` `pes_telefone` VARCHAR(13) NOT NULL ;

@@ -56,10 +56,10 @@ public class DAOPessoa extends ConexaoMySql {
 
     /**
     * recupera Pessoa
-    * @param pPesId
+    * @param pesNome
     * @return ModelPessoa
     */
-    public ModelPessoa getPessoaDAO(int pPesId){
+    public ModelPessoa getPessoaDAO(String pesNome){
         ModelPessoa modelPessoa = new ModelPessoa();
         try {
             this.conectar();
@@ -80,7 +80,7 @@ public class DAOPessoa extends ConexaoMySql {
                  + " FROM"
                      + " Pessoa"
                  + " WHERE"
-                     + " pk_pes_id = '" + pPesId + "'"
+                     + " pes_nome = '" + pesNome + "'"
                 + ";"
             );
 

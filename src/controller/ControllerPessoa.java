@@ -26,8 +26,8 @@ public class ControllerPessoa {
     * @param pPesId
     * @return ModelPessoa
     */
-    public ModelPessoa getPessoaController(int pPesId){
-        return this.daoPessoa.getPessoaDAO(pPesId);
+    public ModelPessoa getPessoaController(String pPesNome){
+        return this.daoPessoa.getPessoaDAO(pPesNome);
     }
 
     /**
