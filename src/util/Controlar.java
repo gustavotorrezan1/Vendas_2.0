@@ -64,6 +64,9 @@ public class Controlar {
                 }
 
             }
+            else{
+                break;
+            }
 
         }
     }
