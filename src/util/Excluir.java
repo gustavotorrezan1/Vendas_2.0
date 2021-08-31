@@ -1,8 +1,12 @@
 package util;
 
 import controller.ControllerCliente;
+import controller.ControllerCompra;
 import controller.ControllerFornecedor;
-import controller.ControllerPessoa;
+import controller.ControllerPagamento;
+import controller.ControllerProduto;
+import controller.ControllerUsuario;
+import controller.ControllerVenda;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,20 +16,44 @@ import javax.swing.JOptionPane;
 public class Excluir {
 
     public static void deletar_fornecedor() {
-        ControllerPessoa controllerPessoa = new ControllerPessoa();
         ControllerFornecedor controllerFornecedor = new ControllerFornecedor();
-        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do fornecedor"));
-        controllerPessoa.getPessoaController(pesId);
-        controllerPessoa.excluirPessoaController(pesId);
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Fornecedor"));
         controllerFornecedor.excluirFornecedorController(pesId);
     }
 
     public static void deletar_cliente() {
-        ControllerPessoa controllerPessoa = new ControllerPessoa();
         ControllerCliente controllerCliente = new ControllerCliente();
-        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do fornecedor"));
-        controllerPessoa.getPessoaController(pesId);
-        controllerPessoa.excluirPessoaController(pesId);
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Cliente"));
         controllerCliente.excluirClienteController(pesId);
+    }
+
+    public static void deletar_usuario() {
+        ControllerUsuario controllerUsuario = new ControllerUsuario();
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Usuário"));
+        controllerUsuario.excluirUsuarioController(pesId);
+    }
+
+    public static void deletar_produto() {
+        ControllerProduto controllerProduto = new ControllerProduto();
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Produto"));
+        controllerProduto.excluirProdutoController(pesId);
+    }
+
+    public static void deletar_Venda() {
+        ControllerVenda controllerVenda = new ControllerVenda();
+        ControllerPagamento controllerPagamento = new ControllerPagamento();
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id da Venda"));
+        controllerVenda.excluirVendaController(pesId);
+        pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Pagamento"));
+        controllerPagamento.excluirPagamentoController(pesId);
+    }
+
+    public static void deletar_Compra() {
+        ControllerCompra controllerCompra = new ControllerCompra();
+        ControllerPagamento controllerPagamento = new ControllerPagamento();
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id da Compra"));
+        controllerCompra.excluirCompraController(pesId);
+        pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Pagamento"));
+        controllerPagamento.excluirPagamentoController(pesId);
     }
 }

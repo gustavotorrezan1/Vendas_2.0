@@ -42,6 +42,7 @@ public class Cadastrar {
         ModelPessoa.setPesRua(JOptionPane.showInputDialog("Informe o rua do usuário"));
         ModelPessoa.setPesNum_rua(JOptionPane.showInputDialog("Informe o número da rua do usuário"));
         controllerPessoa.salvarPessoaController(ModelPessoa);
+        JOptionPane.showMessageDialog(null, "Consute o id no bancos de dados");
       
     }
 
