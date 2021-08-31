@@ -205,3 +205,20 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 ALTER TABLE `controleestoque`.`pessoa` 
 CHANGE COLUMN `pes_telefone` `pes_telefone` VARCHAR(13) NOT NULL ;
+
+ALTER TABLE `controleestoque`.`pagamento` 
+CHANGE COLUMN `pag_data_pagamanto` `pag_data_pagamanto` DATE NULL ,
+CHANGE COLUMN `pag_hora_pagamento` `pag_hora_pagamento` TIME NULL ;
+
+ALTER TABLE `controleestoque`.`compra` 
+DROP FOREIGN KEY `fk_Compra_Produto1`;
+ALTER TABLE `controleestoque`.`compra` 
+CHANGE COLUMN `com_data_compra` `com_data_compra` DATE NULL ,
+CHANGE COLUMN `com_hora_compra` `com_hora_compra` TIME NULL ,
+CHANGE COLUMN `com_hora_recebimento` `com_hora_recebimento` TIME NULL ,
+CHANGE COLUMN `com_data_recebimento` `com_data_recebimento` DATE NULL ,
+CHANGE COLUMN `pk_pro_id` `fk_pro_id` INT NOT NULL ;
+ALTER TABLE `controleestoque`.`compra` 
+ADD CONSTRAINT `fk_Compra_Produto1`
+  FOREIGN KEY (`fk_pro_id` , `fk_for_id`)
+  REFERENCES `controleestoque`.`produto` (`pk_pro_id` , `fk_for_id`);

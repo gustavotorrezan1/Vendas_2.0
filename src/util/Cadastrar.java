@@ -6,18 +6,22 @@
 package util;
 
 import controller.ControllerCliente;
+import controller.ControllerCompra;
 import controller.ControllerFornecedor;
 import controller.ControllerPagamento;
 import controller.ControllerPessoa;
 import controller.ControllerProduto;
 import controller.ControllerUsuario;
+import controller.ControllerVenda;
 import javax.swing.JOptionPane;
 import model.ModelCliente;
+import model.ModelCompra;
 import model.ModelFornecedor;
 import model.ModelPagamento;
 import model.ModelPessoa;
 import model.ModelProduto;
 import model.ModelUsuario;
+import model.ModelVenda;
 
 /**
  *
@@ -43,7 +47,7 @@ public class Cadastrar {
         ModelPessoa.setPesNum_rua(JOptionPane.showInputDialog("Informe o número da rua do usuário"));
         controllerPessoa.salvarPessoaController(ModelPessoa);
         JOptionPane.showMessageDialog(null, "Consute o id no bancos de dados");
-      
+
     }
 
     public static void cadastro_fornecedor() {
@@ -64,45 +68,64 @@ public class Cadastrar {
         ModelCliente ModelCliente = new ModelCliente();
         ControllerCliente ControllerCliente = new ControllerCliente();
         ModelCliente = new ModelCliente();
-        ModelCliente.setCliId(Integer.valueOf(JOptionPane.showInputDialog("Informe o ID da Pessoa")));
+        ModelCliente.setPesId(Integer.valueOf(JOptionPane.showInputDialog("Informe o ID da Pessoa")));
 
     }
 
     public static void cadastro_produto() {
         ModelProduto ModelProduto = new ModelProduto();
-        ControllerProduto ControllerProduto = new ControllerProduto();
+        ControllerProduto controllerProduto = new ControllerProduto();
         ModelProduto = new ModelProduto();
-        ModelProduto.setProDescricao(JOptionPane.showInputDialog("Informe a descri��o do produto"));
+        ModelProduto.setProDescricao(JOptionPane.showInputDialog("Informe a descrição do produto"));
         ModelProduto.setProNomeLongo(JOptionPane.showInputDialog("Informe o nome do Produto"));
         ModelProduto.setProCod_bar(JOptionPane.showInputDialog("Informe o codigo de barras do Produto"));
-        ModelProduto.setProPreco_ven(Double.parseDouble(JOptionPane.showInputDialog("Informe o pre�o de venda do Produto")));
-        ModelProduto.setProPreco_cus(Double.parseDouble(JOptionPane.showInputDialog("Informe o pre�o de custo do Produto")));
+        ModelProduto.setProPreco_ven(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço de venda do Produto")));
+        ModelProduto.setProPreco_cus(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço de custo do Produto")));
         ModelProduto.setProCategoria(JOptionPane.showInputDialog("Informe a categoria  do Produto"));
         ModelProduto.setProTipo_un(JOptionPane.showInputDialog("Informe o tipo do Produto"));
         ModelProduto.setProQnt_estoque(Integer.parseInt(JOptionPane.showInputDialog("Informe a quantidade no estoque do Produto")));
-
-        //ModelProduto ModelProduto = new ModelProduto();
-        //ControllerPessoa ControllerPessoa = new ControllerPessoa();
-        // ModelPessoa.setPesNome(JOptionPane.showInputDialog("Informe o nome do usuário"));
-        //ControllerPessoa.getPessoaController(PesNome);
+        ModelProduto.setForId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Fornecedor")));
+        controllerProduto.salvarProdutoController(ModelProduto);
     }
 
     public static void cadastro_pagamento() {
         ModelPagamento ModelPagamento = new ModelPagamento();
-        ControllerPagamento ControllerPagamento = new ControllerPagamento();
+        ControllerPagamento controllerPagamento = new ControllerPagamento();
         ModelPagamento = new ModelPagamento();
-        // ModelPagamento.setPagTipo(JOptionPane.showInputDialog("Informe o tipo de pagamento"));
-        // ModelPagamento.setPagValor(JOptionPane.showInputDialog("Informe o valor do pagamento"));
-//        ModelPagamento.setPagData(JOptionPane.showInputDialog("Informe a data do pagamento"));
+        ModelPagamento.setPagTipo_pagamento(JOptionPane.showInputDialog("Informe o tipo de pagamento"));
+        ModelPagamento.setPagValor_pagemento(Double.parseDouble(JOptionPane.showInputDialog("Informe o valor do pagamento")));
+        controllerPagamento.salvarPagamentoController(ModelPagamento);
     }
 
     public static void cadastro_usuario() {
-        // ModelPagamento ModelUsuario = new ModelUsusario();
-        ControllerUsuario ControllerUsuario = new ControllerUsuario();
-        //ModelUsuario = new ModelUsuario();
-        //ModelUsuario.setUsuLogin(JOptionPane.showInputDialog("Informe o tipo de pagamento"));
-        //ModelUsuario.setUsuSenha(JOptionPane.showInputDialog("Informe o valor do pagamento"));
+        ModelUsuario ModelUsuario = new ModelUsuario();
+        ControllerUsuario controllerUsuario = new ControllerUsuario();
+        ModelUsuario = new ModelUsuario();
+        ModelUsuario.setUsuLogin(JOptionPane.showInputDialog("Informe o Login"));
+        ModelUsuario.setUsuSenha(JOptionPane.showInputDialog("Informe a senha"));
+        ModelUsuario.setPesId(JOptionPane.showInputDialog("Informe o Id da pessoa"));
+        controllerUsuario.salvarUsuarioController(ModelUsuario);
     }
 
-    // fazer o cadastro dos produtos e do pagamento e usuario
+    public static void cadastro_venda() {
+        ModelVenda ModelVenda = new ModelVenda();
+        ControllerVenda controllerVenda = new ControllerVenda();
+        ModelVenda = new ModelVenda();
+        ModelVenda.setPagId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Pagamento")));
+        ModelVenda.setProId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Produto")));
+        ModelVenda.setUsuId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Usuário")));
+        ModelVenda.setVenId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Venda")));
+        controllerVenda.salvarVendaController(ModelVenda);
+    }
+        public static void cadastro_compra() {
+        ModelCompra ModelCompra = new ModelCompra();
+        ControllerCompra controllerCompra = new ControllerCompra();
+        ModelCompra = new ModelCompra();
+        ModelCompra.setPagId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Pagamento")));
+        ModelCompra.setProId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Produto")));
+        ModelCompra.setUsuId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Usuário")));
+        ModelCompra.setForId(Integer.parseInt(JOptionPane.showInputDialog("Informe o ID do Fornecedor")));
+        controllerCompra.salvarCompraController(ModelCompra);
+    }
+
 }
