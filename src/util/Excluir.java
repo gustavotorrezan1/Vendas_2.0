@@ -39,7 +39,7 @@ public class Excluir {
         controllerProduto.excluirProdutoController(pesId);
     }
 
-    public static void deletar_Venda() {
+    public static void deletar_venda() {
         ControllerVenda controllerVenda = new ControllerVenda();
         ControllerPagamento controllerPagamento = new ControllerPagamento();
         int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id da Venda"));
@@ -48,12 +48,18 @@ public class Excluir {
         controllerPagamento.excluirPagamentoController(pesId);
     }
 
-    public static void deletar_Compra() {
+    public static void deletar_compra() {
         ControllerCompra controllerCompra = new ControllerCompra();
         ControllerPagamento controllerPagamento = new ControllerPagamento();
         int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id da Compra"));
         controllerCompra.excluirCompraController(pesId);
         pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Pagamento"));
+        controllerPagamento.excluirPagamentoController(pesId);
+    }
+
+    public static void deletar_pagamento() {
+        ControllerPagamento controllerPagamento = new ControllerPagamento();
+        int pesId = Integer.valueOf(JOptionPane.showInputDialog("Informe id do Fornecedor"));
         controllerPagamento.excluirPagamentoController(pesId);
     }
 }
