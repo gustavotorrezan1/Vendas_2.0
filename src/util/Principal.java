@@ -30,7 +30,11 @@ public class Principal {
          ModelPessoa.setPesBairro(JOptionPane.showInputDialog("Informe o bairro do usuário"));
          ModelPessoa.setPesRua(JOptionPane.showInputDialog("Informe o rua do usuário"));
          ModelPessoa.setPesNum_rua(JOptionPane.showInputDialog("Informe o número da rua do usuário"));
+         
          ControllerPessoa.salvarPessoaController(ModelPessoa);
+         /////
+         //
+         
          
          
          
